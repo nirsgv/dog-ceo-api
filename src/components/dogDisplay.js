@@ -10,7 +10,7 @@ function DogDisplay({ selectedBreed }) {
 
     useEffect(() => {
 
-        getBreedImages(selectedBreed = 'hound')
+        getBreedImages(selectedBreed)
             .then(data => data.json())
             .then(data => data.message)
             .then(data => setImages(data))
@@ -21,7 +21,7 @@ function DogDisplay({ selectedBreed }) {
     return (
         <>
         <h1>{selectedBreed}</h1>
-        <img className="select-options" src="https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg" />
+        <img className="select-options" src={images[0]} />
         </>
     );
 }
