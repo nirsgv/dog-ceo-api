@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SelectOptions from "./components/selectOptions";
-import DogDisplay from "./components/dogDisplay";
+import SelectedBreed from "./components/selectedBreed";
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <SelectOptions setSelectedBreed={setSelectedBreed}/>
-        <DogDisplay selectedBreed={selectedBreed}/>
+        <SelectedBreed selectedBreed={selectedBreed}/>
 
         <p>
           Edit <code>src/App.js</code> and save to reload.
